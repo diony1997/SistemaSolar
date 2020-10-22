@@ -81,6 +81,8 @@ public class Cena implements GLEventListener {
         }
 
         gl.glShadeModel(shader);
+        
+        //Sol
         gl.glPushMatrix();
         gl.glColor3f(0.7f, 0.7f, 0);
         gl.glRotatef(90, anguloy, 0, anguloz);
@@ -94,7 +96,7 @@ public class Cena implements GLEventListener {
         gl.glPushMatrix();
         gl.glRotatef(ano*4.5f, 0, anguloy, anguloz);
         gl.glTranslatef(20f, 0.0f, 0.0f);
-        gl.glRotatef(dia*0.1f, 0f, 1f, 0f);
+        gl.glRotatef(dia*0.1f, 0, anguloy, anguloz);
         gl.glRotatef(90, anguloy, 0, anguloz);
         gl.glColor3f(0.4f, 0.4f, 0.4f);
         glut.glutSolidSphere(0.8f, 10, 8);
@@ -105,7 +107,7 @@ public class Cena implements GLEventListener {
         gl.glPushMatrix();
         gl.glRotatef(ano*1.5f, 0, anguloy, anguloz);
         gl.glTranslatef(25f, 0.0f, 0.0f);
-        gl.glRotatef(dia*0.2f, 0f, 1f, 0f);
+        gl.glRotatef(dia*0.2f, 0, anguloy, anguloz);
         gl.glRotatef(90, anguloy, 0, anguloz);
         gl.glColor3f(0.4f, 0.4f, 0);
         glut.glutSolidSphere(1.2f, 10, 8);
@@ -116,7 +118,7 @@ public class Cena implements GLEventListener {
         gl.glPushMatrix();
         gl.glRotatef(ano, 0, anguloy, anguloz);
         gl.glTranslatef(30f, 0.0f, 0.0f);
-        gl.glRotatef(dia, 0f, 1f, 0f);
+        gl.glRotatef(dia, 0, anguloy, anguloz);
         gl.glRotatef(90, anguloy, 0, anguloz);
         gl.glColor3f(0f, 0f, 0.7f);
         glut.glutSolidSphere(1.2f, 10, 8);
@@ -126,7 +128,7 @@ public class Cena implements GLEventListener {
         gl.glPushMatrix();
         gl.glRotatef(ano*0.5f, 0, anguloy, anguloz);
         gl.glTranslatef(45f, 0.0f, 0.0f);
-        gl.glRotatef(dia, 0f, 1f, 0f);
+        gl.glRotatef(dia, 0, anguloy, anguloz);
         gl.glRotatef(90, anguloy, 0, anguloz);
         gl.glColor3f(0.7f, 0, 0);
         glut.glutSolidSphere(0.8f, 10, 8);
@@ -136,7 +138,7 @@ public class Cena implements GLEventListener {
         gl.glPushMatrix();
         gl.glRotatef(ano*0.08f, 0, anguloy, anguloz);
         gl.glTranslatef(55f, 0.0f, 0.0f);
-        gl.glRotatef(dia*0.1f, 0f, 1f, 0f);
+        gl.glRotatef(dia*0.1f, 0, anguloy, anguloz);
         gl.glRotatef(90, anguloy, 0, anguloz);
         gl.glColor3f(0.6f, 0.3f, 0);
         glut.glutSolidSphere(5, 10, 8);
@@ -146,17 +148,19 @@ public class Cena implements GLEventListener {
         gl.glPushMatrix();
         gl.glRotatef(ano*0.04f, 0, anguloy, anguloz);
         gl.glTranslatef(70f, 0.0f, 0.0f);
-        gl.glRotatef(dia*0.5f, 0f, 1f, 0f);
+        gl.glRotatef(dia*0.5f, 0, anguloy, anguloz);
         gl.glRotatef(90, anguloy, 0, anguloz);
         gl.glColor3f(0.4f, 0.4f, 0);
         glut.glutSolidSphere(4, 10, 8);
+        gl.glRotatef(27, anguloy, 0, anguloz);
+        glut.glutSolidTorus(0.5,6,9,20);
         gl.glPopMatrix();
 
         //Uranus
         gl.glPushMatrix();
         gl.glRotatef(ano*0.001f, 0, anguloy, anguloz);
         gl.glTranslatef(84f, 0.0f, 0.0f);
-        gl.glRotatef(dia*0.8f, 0f, 1f, 0f);
+        gl.glRotatef(dia*0.8f, 0, anguloy, anguloz);
         gl.glRotatef(90, anguloy, 0, anguloz);
         gl.glColor3f(0f, 0f, 0.4f);
         glut.glutSolidSphere(1.5, 10, 8);
@@ -166,7 +170,7 @@ public class Cena implements GLEventListener {
         gl.glPushMatrix();
         gl.glRotatef(ano*0.0005f, 0, anguloy, anguloz);
         gl.glTranslatef(95f, 0.0f, 0.0f);
-        gl.glRotatef(dia*0.8f, 0f, 1f, 0f);
+        gl.glRotatef(dia*0.8f, 0, anguloy, anguloz);
         gl.glRotatef(90, anguloy, 0, anguloz);
         gl.glColor3f(0f, 0f, 0.2f);
         glut.glutSolidSphere(1.5f, 10, 8);
